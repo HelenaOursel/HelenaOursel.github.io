@@ -1,0 +1,108 @@
+@import 'variables';
+
+.creative-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 20px;
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    font-size: 2.5rem;
+    color: $text-light;
+    text-align: center;
+    margin-bottom: 15px; // Reduced from 30px to 15px
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    width: 100%;
+  }
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: $border-radius;
+  cursor: pointer;
+  transition: all $transition-speed ease;
+  
+  &:hover {
+    transform: translateY(-3px);
+  }
+}
+
+.btn-pulse {
+  background-color: $primary-color;
+  color: $text-light;
+  animation: pulse 1.5s infinite;
+
+  &:hover {
+    animation: none;
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba($primary-color, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba($primary-color, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba($primary-color, 0);
+  }
+}
+
+.btn-shiny {
+  background: linear-gradient(45deg, $secondary-color, lighten($secondary-color, 15%));
+  color: $text-light;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(45deg);
+    transition: all 0.5s;
+  }
+
+  &:hover::before {
+    left: 100%;
+  }
+}
+
+.btn-3d {
+  background-color: $success-color;
+  color: $text-light;
+  box-shadow: 0 6px darken($success-color, 10%);
+
+  &:hover {
+    box-shadow: 0 4px darken($success-color, 10%);
+  }
+
+  &:active {
+    box-shadow: 0 2px darken($success-color, 10%);
+    transform: translateY(2px);
+  }
+}
+
+.btn-gradient {
+  background: linear-gradient(45deg, $info-color, $primary-color);
+  color: $text-light;
+  background-size: 200% auto;
+  transition: 0.5s;
+
+  &:hover {
+    background-position: right center;
+  }
+}

@@ -1,0 +1,47 @@
+@import 'variables';
+
+.Projets {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  padding-top: 0;
+  background-color: $background-dark;
+}
+
+.projets-liste {
+  display: flex;
+  flex-direction: column; // Change to column layout
+  align-items: center;
+  width: 100%;
+  max-width: 100%; // Change to 100% to allow full width
+}
+
+.projets-liste > * {
+  width: 100%; // Set width to 100%
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $background-dark;
+  padding: 20px;
+  transition: transform 0.3s ease;
+  position: relative; // Ajout de cette ligne
+
+  &:nth-child(odd) {
+    background-color: lighten($background-dark, 5%); // Slightly lighter grey for odd components
+  }
+
+  &:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: $primary-color;
+    z-index: 3;
+  }
+}

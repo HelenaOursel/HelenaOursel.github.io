@@ -1,0 +1,68 @@
+@import 'variables';
+
+.experience {
+  padding: 2rem;
+  background-color: $background-dark;
+  color: $text-light;
+  font-family: 'Arial', sans-serif;
+
+  .experience-chart {
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 2rem;
+
+    svg {
+      display: block;
+      margin: 0 auto;
+    }
+
+    .experience-label {
+      font-size: 12px;
+      fill: white;
+    }
+  }
+
+  .experience-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .experience-item {
+      background-color: $background-grey;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+      h3 {
+        color: $primary-color;
+        margin-bottom: 0.5rem;
+      }
+
+      h4 {
+        color: $text-light;
+        margin-bottom: 0.5rem;
+      }
+
+      .date {
+        font-style: italic;
+        color: #aaa;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        line-height: 1.6;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .experience {
+    .experience-chart {
+      svg {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

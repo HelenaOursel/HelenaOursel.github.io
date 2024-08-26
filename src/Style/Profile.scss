@@ -1,0 +1,46 @@
+@import 'variables';
+
+// Mixin pour les titres de section
+@mixin section-title {
+  font-size: 2rem;
+  color: $primary-color;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: $primary-color;
+  }
+}
+
+// Appliquer le style à tous les h2 dans les sections
+section h2 {
+  @include section-title;
+}
+
+// Styles spécifiques pour chaque section si nécessaire
+.presentation {
+  // Styles spécifiques pour la section présentation
+}
+
+.formation {
+  // Styles spécifiques pour la section formation
+}
+
+.experience {
+  // Styles spécifiques pour la section expérience
+}
+
+.skills {
+  // Styles spécifiques pour la section compétences
+}
+
+// Ajoutez d'autres styles spécifiques aux sections si nécessaire

@@ -1,0 +1,75 @@
+@import 'variables';
+
+nav {
+  background-color: $background-grey;
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+    li {
+      margin: 0 20px;
+
+      a {
+        color: $text-light;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        position: relative;
+        padding: 5px 0;
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          background-color: $primary-color;
+          transition: width 0.3s ease;
+        }
+
+        &:hover,
+        &.active {
+          color: $primary-color;
+
+          &::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .icon {
+    display: flex;
+  }
+
+  .linkedin-icon,
+  .github-icon {
+    margin-right: 25px;
+
+    a {
+      color: $text-light;
+      font-size: 26px;
+      transition: color 0.3s ease;
+      
+      &:focus,
+      &:active {
+        color: $primary-color;
+      }
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}
