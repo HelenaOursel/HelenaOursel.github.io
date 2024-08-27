@@ -31,7 +31,7 @@ const NavBar = () => {
         </a>
       </div>
       <div className="github-icon">
-        <a href="https://github.com/YourGitHubUsername" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/HelenaOursel/HelenaOursel.github.io" target="_blank" rel="noopener noreferrer">
           <i className="fa-brands fa-github"></i>
         </a>
       </div>
