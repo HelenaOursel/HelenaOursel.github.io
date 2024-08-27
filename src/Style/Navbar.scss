@@ -72,4 +72,12 @@ nav {
       }
     }
   }
+
+  @media (max-width: 768px) {
+    ul {
+      li {
+        margin: 0 10px;
+      }
+    }
+  }
 }
