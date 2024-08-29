@@ -4,7 +4,7 @@ import '../Style/Formation.scss';
 const Formation = () => {
   const formations = [
     {
-      period: '2018 - 2024',
+      period: '2024',
       school: 'CESI - Ecole d\'ingénieur',
       degree: 'Diplôme d\'Ingénieur Informatique',
       details: [
@@ -16,7 +16,7 @@ const Formation = () => {
       ]
     },
     {
-      period: '2015 - 2018',
+      period: '2019',
       school: 'Lycée Camille-Saint-Saëns',
       degree: 'BAC Scientifique - Assez Bien',
       details: [
